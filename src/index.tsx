@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <div className={"container"}>
+    <div className="container">
       <ProductDetails />
     </div>
   </React.StrictMode>

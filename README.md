@@ -1,6 +1,11 @@
-## User Story: Rename Portfolio
+This is a small fake cash account, where it is possible to change the portfolio name, using the local component state.
+All components are covered by unit tests.
 
-As a user, I want to rename my portfolio so that I can easily identify it among my other broker portfolios.
+TODOs:
+
+1. Let the input be submitted if user didn't focus it
+2. Adjust formatting
+3. Make the Pencil icon accept "title" prop
 
 Follow these steps to set up and run the project:
 

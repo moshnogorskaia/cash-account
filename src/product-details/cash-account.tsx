@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import styled from "styled-components";
 
 const Header2 = styled.h2`
@@ -99,17 +99,17 @@ export const CashAccount: FunctionComponent = () => {
 
   return (
     <>
-      <Header2 id="cash-account">{"Cash account"}</Header2>
-      <List aria-labelledby={"cash-account"}>
+      <Header2 id="cash-account">Example account</Header2>
+      <List aria-labelledby="cash-account">
         <ListItem>
           <RowContent>
-            <RowLabel>{"IBAN"}</RowLabel>
+            <RowLabel>IBAN</RowLabel>
             <RowValue>{iban}</RowValue>
           </RowContent>
         </ListItem>
         <ListItem>
           <RowContent>
-            <RowLabel>{"BIC"}</RowLabel>
+            <RowLabel>BIC</RowLabel>
             <RowValue>{bic}</RowValue>
           </RowContent>
         </ListItem>
@@ -121,7 +121,7 @@ export const CashAccount: FunctionComponent = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {"Cash Balance Allocation"}
+                Cash Balance Allocation
               </a>
             </ClickableRowContent>
           </ListItem>

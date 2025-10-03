@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { SecuritiesAccount } from "./securities-account";
 import { CashAccount } from "./cash-account";
@@ -44,10 +43,10 @@ export default function ProductDetails() {
   return (
     <div>
       <Header>
-        <BackButton href="/" aria-label={"Go Back"}>
+        <BackButton href="/" aria-label="Go Back">
           {"<"}
         </BackButton>
-        <h1>{"Product Details"}</h1>
+        <h1>Product Details</h1>
       </Header>
       <MainSection>
         <div>
