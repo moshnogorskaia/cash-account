@@ -1,3 +1,6 @@
+
+<img width="533" height="666" alt="Screenshot 2025-10-04 at 10 11 45" src="https://github.com/user-attachments/assets/fbdc7da3-18cc-4f08-ae25-2ed24cb27279" />
+
 This is a small fake cash account, where it is possible to change the portfolio name, using the local component state.
 All components are covered by unit tests.
 
