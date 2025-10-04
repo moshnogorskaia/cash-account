@@ -6,7 +6,7 @@ const List = styled.ol`
   list-style: none;
 
   & li + li {
-    border-top: 1px solid var(--white-5, rgba(255, 255, 255, 0.05));
+    border-top: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
   }
 
   & li:first-child {
@@ -27,7 +27,7 @@ const ListItem = styled.li`
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
-  background: var(--Greys-Positive-Jet, #191a1c);
+  background: var(--light-gray);
 `;
 
 const RowContent = styled.form`
@@ -41,7 +41,7 @@ const RowContent = styled.form`
 `;
 
 const RowLabel = styled.label`
-  color: var(--White-60, rgba(255, 255, 255, 0.6));
+  color: var(--black-60, rgba(0, 0, 0, 0.6));
   font-style: normal;
   font-weight: var(--font-weight-normal);
   line-height: normal;
@@ -55,7 +55,7 @@ const RowValue = styled.span`
   gap: calc(var(--spacing) * 0.5);
   flex: 1 0 0;
   font-weight: var(--font-weight-semi-bold);
-  color: var(--white);
+  color: var(--black);
   line-height: 20px;
   letter-spacing: 0.15px;
 `;
@@ -63,13 +63,19 @@ const RowValue = styled.span`
 const EditButton = styled.button`
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const Input = styled.input<{ $hasError?: boolean }>`
+  background: var(--white);
+  border: 1px solid var(--medium-gray);
+  color: var(--black);
+  padding: 4px 8px;
+  border-radius: 4px;
+  
   ${props => props.$hasError && `
     border: 1px solid red;
   `}
@@ -77,12 +83,18 @@ const Input = styled.input<{ $hasError?: boolean }>`
   :invalid {
     border: 1px solid red;
   }
+  
+  :focus {
+    outline: none;
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 2px rgba(61, 220, 151, 0.2);
+  }
 `;
 
 
 export const PortfolioName: React.FunctionComponent = () => {
   const [isEditing, setIsEditing] = useState(false);
-  const [portfolioName, setPortfolioName] = useState("Broker Portfolio");
+  const [portfolioName, setPortfolioName] = useState("Example Portfolio");
   const [hasError, setHasError] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

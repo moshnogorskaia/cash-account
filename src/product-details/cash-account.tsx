@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Header2 = styled.h2`
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semi-bold);
-  color: var(--white-60);
+  color: var(--black-60);
   margin-bottom: calc(var(--spacing) * 2);
   margin-top: calc(var(--spacing) * 3);
 `;
@@ -13,7 +13,7 @@ const List = styled.ol`
   list-style: none;
 
   & li + li {
-    border-top: 1px solid var(--white-5, rgba(255, 255, 255, 0.05));
+    border-top: 1px solid var(--black-5, rgba(0, 0, 0, 0.05));
   }
 
   & li:first-child {
@@ -34,7 +34,7 @@ const ListItem = styled.li`
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
-  background: var(--Greys-Positive-Jet, #191a1c);
+  background: var(--light-gray);
 `;
 
 const RowContent = styled.div`
@@ -59,7 +59,7 @@ const ClickableRowContent = styled.div`
 `;
 
 const RowLabel = styled.span`
-  color: var(--White-60, rgba(255, 255, 255, 0.6));
+  color: var(--black-60, rgba(0, 0, 0, 0.6));
   font-style: normal;
   font-weight: var(--font-weight-normal);
   line-height: normal;
@@ -73,7 +73,7 @@ const RowValue = styled.span`
   gap: calc(var(--spacing) * 0.5);
   flex: 1 0 0;
   font-weight: var(--font-weight-semi-bold);
-  color: var(--white);
+  color: var(--black);
   line-height: 20px;
   letter-spacing: 0.15px;
 `;
@@ -83,8 +83,8 @@ export const CashAccount: FunctionComponent = () => {
   const data = {
     portfolio: {
       cashAccount: {
-        iban: "DE89370400440532013000",
-        bic: "COBADEFFXXX",
+        iban: "DE89370400440555013000",
+        bic: "COBABBFFXXX",
       },
       postOnboardingInfo: {
         id: "PostOnboardingInfo-oCt4GtuDS2YjimboYTBfNu",
@@ -121,7 +121,7 @@ export const CashAccount: FunctionComponent = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Cash Balance Allocation
+                Balance
               </a>
             </ClickableRowContent>
           </ListItem>

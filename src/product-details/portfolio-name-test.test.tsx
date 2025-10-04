@@ -8,7 +8,7 @@ describe("PortfolioName", () => {
     render(<PortfolioName />);
 
     expect(screen.getByText("Portfolio name")).toBeInTheDocument();
-    expect(screen.getByText("Broker Portfolio")).toBeInTheDocument();
+    expect(screen.getByText("Example Portfolio")).toBeInTheDocument();
   });
 
   it("should change the portfolio name successfully on press enter", async () => {

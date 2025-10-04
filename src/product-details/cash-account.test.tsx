@@ -9,16 +9,16 @@ describe("CashAccount", () => {
 
     expect(screen.getByRole("heading", { name: "Cash account" })).toBeVisible();
     expect(screen.getByText("IBAN")).toBeVisible();
-    expect(screen.getByText("DE89370400440532013000")).toBeVisible();
+    expect(screen.getByText("DE89370400440555013000")).toBeVisible();
     expect(screen.getByText("BIC")).toBeVisible();
-    expect(screen.getByText("COBADEFFXXX")).toBeVisible();
+    expect(screen.getByText("COBABBFFXXX")).toBeVisible();
   });
 
-  it("renders Cash Balance Allocation link when onboarding is complete", () => {
+  it("renders Balance link when onboarding is complete", () => {
     render(<CashAccount />);
 
-    expect(screen.getByText("Cash Balance Allocation")).toBeVisible();
-    const link = screen.getByText("Cash Balance Allocation");
+    expect(screen.getByText("Balance")).toBeVisible();
+    const link = screen.getByText("Balance");
     expect(link).toHaveAttribute(
       "href",
       `/cockpit/cash-allocation?portfolioId=oCt4GtuDS2YjimboYTBfNu`

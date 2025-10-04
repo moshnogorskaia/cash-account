@@ -10,7 +10,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   gap: calc(var(--spacing) * 2);
-  color: var(--white);
+  color: var(--black);
 
   & h1 {
     color: inherit;
@@ -18,7 +18,7 @@ const Header = styled.div`
 `;
 
 const BackButton = styled.a`
-  color: var(--white);
+  color: var(--black);
   width: calc(var(--spacing) * 3);
   height: calc(var(--spacing) * 3);
   outline-offset: 2px;
@@ -29,7 +29,7 @@ const BackButton = styled.a`
 
   &:focus-visible {
     outline: 2px solid transparent;
-    box-shadow: 0px 0px 0px 1px var(--woodsmoke), 0px 0px 0px 3px var(--white);
+    box-shadow: 0px 0px 0px 1px var(--white), 0px 0px 0px 3px var(--black);
   }
 `;
 
@@ -46,7 +46,7 @@ export default function ProductDetails() {
         <BackButton href="/" aria-label="Go Back">
           {"<"}
         </BackButton>
-        <h1>Product Details</h1>
+        <h1>Account Details</h1>
       </Header>
       <MainSection>
         <div>
