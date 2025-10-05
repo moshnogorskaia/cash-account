@@ -131,7 +131,7 @@ export const PortfolioName: React.FunctionComponent = () => {
               : portfolioName}
             </RowValue>
             {!isEditing && <EditButton type="button" onClick={() => setIsEditing(true)}>
-              <Pencil />
+              <Pencil title="Edit Portfolio Name" />
             </EditButton>}
           </RowContent>
         </ListItem>

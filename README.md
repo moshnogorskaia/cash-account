@@ -7,8 +7,13 @@ All components are covered by unit tests.
 TODOs:
 
 1. Let the input be submitted if user didn't focus it
-2. Adjust formatting
-3. Make the Pencil icon accept "title" prop
+2. Adjust formattingp
+3. Deploy with github pages
+4. Add a test to Pencil component
+5. Remove unused packages
+6. Add linter
+7. Add SVG
+8. Refactor to NextJS
 
 Follow these steps to set up and run the project:
 
