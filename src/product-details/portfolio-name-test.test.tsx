@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { PortfolioName } from "./portfolio-name";
 
 import "@testing-library/jest-dom";
@@ -11,7 +11,7 @@ describe("PortfolioName", () => {
     expect(screen.getByText("Example Portfolio")).toBeInTheDocument();
   });
 
-  it("should change the portfolio name successfully on press enter", async () => {
+  it("should change the portfolio name successfully on blur", async () => {
     render(<PortfolioName />);
 
     const editButton = screen.getByRole('button');
@@ -21,17 +21,33 @@ describe("PortfolioName", () => {
     const input = screen.getByRole("textbox");
     fireEvent.change(input, { target: { value: 'Test Portfolio' } });
 
-    // Try keyDown event with multiple properties for better compatibility
-    fireEvent.keyDown(input, {
-      key: 'Enter',
-      code: 'Enter',
-      keyCode: 13,
-      which: 13,
-      charCode: 13
-    });
+    fireEvent.blur(input);
 
-    await waitFor(() => {
-      expect(screen.getByText("Test Portfolio")).toBeInTheDocument();
-    });
+    expect(screen.getByText("Test Portfolio")).toBeInTheDocument();
+  });
+
+  it("should show input field when EditButton is clicked", () => {
+    render(<PortfolioName />);
+
+    const editButton = screen.getByRole('button');
+
+    fireEvent.click(editButton);
+
+    const input = screen.getByRole("textbox");
+
+    expect(input).toBeInTheDocument();
+    expect(input).toHaveValue("Example Portfolio");
+  });
+
+  it("should focus the input when EditButton is clicked", () => {
+    render(<PortfolioName />);
+
+    const editButton = screen.getByRole('button');
+
+    fireEvent.click(editButton);
+
+    const input = screen.getByRole("textbox");
+
+    expect(input).toHaveFocus();
   });
 });

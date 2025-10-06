@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Pencil } from "../Pencil";
 
@@ -96,6 +96,7 @@ export const PortfolioName: React.FunctionComponent = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [portfolioName, setPortfolioName] = useState("Example Portfolio");
   const [hasError, setHasError] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPortfolioName(e.target.value);
@@ -111,6 +112,16 @@ export const PortfolioName: React.FunctionComponent = () => {
     }
   };
 
+  const handleEditClick = () => {
+    setIsEditing(true);
+  };
+
+  useEffect(() => {
+    if (isEditing && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isEditing]);
+
   return (
     <>
       <List>
@@ -119,6 +130,7 @@ export const PortfolioName: React.FunctionComponent = () => {
             <RowLabel htmlFor='portfolioName'>Portfolio name</RowLabel>
             <RowValue>{isEditing
               ? <Input
+                ref={inputRef}
                 type="text"
                 id="portfolioName"
                 value={portfolioName}
@@ -130,7 +142,7 @@ export const PortfolioName: React.FunctionComponent = () => {
               />
               : portfolioName}
             </RowValue>
-            {!isEditing && <EditButton type="button" onClick={() => setIsEditing(true)}>
+            {!isEditing && <EditButton type="button" onClick={handleEditClick}>
               <Pencil title="Edit Portfolio Name" />
             </EditButton>}
           </RowContent>
