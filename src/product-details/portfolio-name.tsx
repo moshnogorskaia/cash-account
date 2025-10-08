@@ -92,7 +92,7 @@ const Input = styled.input<{ $hasError?: boolean }>`
 `;
 
 
-export const PortfolioName: React.FunctionComponent = () => {
+export const PortfolioName = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [portfolioName, setPortfolioName] = useState("Example Portfolio");
   const [hasError, setHasError] = useState(false);
@@ -123,31 +123,29 @@ export const PortfolioName: React.FunctionComponent = () => {
   }, [isEditing]);
 
   return (
-    <>
-      <List>
-        <ListItem>
-          <RowContent onSubmit={handleSubmit}>
-            <RowLabel htmlFor='portfolioName'>Portfolio name</RowLabel>
-            <RowValue>{isEditing
-              ? <Input
-                ref={inputRef}
-                type="text"
-                id="portfolioName"
-                value={portfolioName}
-                onChange={handleChange}
-                onBlur={() => handleSubmit()}
-                minLength={1}
-                required
-                $hasError={hasError}
-              />
-              : portfolioName}
-            </RowValue>
-            {!isEditing && <EditButton type="button" onClick={handleEditClick}>
-              <Pencil title="Edit Portfolio Name" />
-            </EditButton>}
-          </RowContent>
-        </ListItem>
-      </List>
-    </>
+    <List>
+      <ListItem>
+        <RowContent onSubmit={handleSubmit}>
+          <RowLabel htmlFor='portfolioName'>Portfolio name</RowLabel>
+          <RowValue>{isEditing
+            ? <Input
+              ref={inputRef}
+              type="text"
+              id="portfolioName"
+              value={portfolioName}
+              onChange={handleChange}
+              onBlur={() => handleSubmit()}
+              minLength={1}
+              required
+              $hasError={hasError}
+            />
+            : portfolioName}
+          </RowValue>
+          {!isEditing && <EditButton type="button" onClick={handleEditClick}>
+            <Pencil title="Edit Portfolio Name" />
+          </EditButton>}
+        </RowContent>
+      </ListItem>
+    </List>
   );
 };

@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import styled from "styled-components";
 
 const Header2 = styled.h2`
@@ -67,7 +66,7 @@ const RowValue = styled.span`
   letter-spacing: 0.15px;
 `;
 
-export const SecuritiesAccount: FunctionComponent = () => {
+export const SecuritiesAccount = () => {
   const data = {
     portfolio: {
       securitiesAccountNumber: "0123456789",

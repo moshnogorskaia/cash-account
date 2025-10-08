@@ -8,9 +8,8 @@ export const Pencil = ({ title }: Props) => (
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    role="img"
+    aria-label={title}
   >
-    <title>{title}</title>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

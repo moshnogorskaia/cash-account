@@ -7,12 +7,11 @@ All components are covered by unit tests.
 
 TODOs:
 
-1. Adjust formatting
-2. Add a test to Pencil component
-3. Remove unused packages
-4. Add linter
-5. Add SVG
-6. Refactor to NextJS
+1. Add a test to Pencil component
+2. Remove unused packages
+3. Add linter
+4. Add SVG
+5. Refactor to NextJS
 
 Follow these steps to set up and run the project:
 

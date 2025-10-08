@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import styled from "styled-components";
 
 const Header2 = styled.h2`
@@ -79,7 +78,7 @@ const RowValue = styled.span`
 `;
 
 const portfolioId = "oCt4GtuDS2YjimboYTBfNu";
-export const CashAccount: FunctionComponent = () => {
+export const CashAccount = () => {
   const data = {
     portfolio: {
       cashAccount: {
