@@ -142,7 +142,7 @@ export const PortfolioName = () => {
             : portfolioName}
           </RowValue>
           {!isEditing && <EditButton type="button" onClick={handleEditClick}>
-            <Pencil title="Edit Portfolio Name" />
+            <Pencil />
           </EditButton>}
         </RowContent>
       </ListItem>
