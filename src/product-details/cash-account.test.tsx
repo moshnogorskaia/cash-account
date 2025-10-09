@@ -7,7 +7,7 @@ describe("CashAccount", () => {
   it("renders IBAN and BIC when data is available", () => {
     render(<CashAccount />);
 
-    expect(screen.getByRole("heading", { name: "Cash account" })).toBeVisible();
+    expect(screen.getByRole("heading", { name: "Example account" })).toBeVisible();
     expect(screen.getByText("IBAN")).toBeVisible();
     expect(screen.getByText("DE89370400440555013000")).toBeVisible();
     expect(screen.getByText("BIC")).toBeVisible();

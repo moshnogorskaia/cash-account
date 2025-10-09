@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import { Pencil } from "../Pencil";
+import { Pencil } from "../icons/Pencil/Pencil";
 
 const List = styled.ol`
   list-style: none;

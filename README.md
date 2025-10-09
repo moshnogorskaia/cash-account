@@ -7,7 +7,7 @@ All components are covered by unit tests.
 
 TODOs:
 
-1. Add a test to Pencil component
+1. Restructure the project and rename components
 2. Remove unused packages
 3. Add linter
 4. Add SVG
