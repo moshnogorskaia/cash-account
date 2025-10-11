@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { CashAccount } from "./cash-account";
+import { CashAccount } from "../CashAccount/cash-account";
 
 import "@testing-library/jest-dom";
 

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { PortfolioName } from "./portfolio-name";
+import { PortfolioName } from "../PortfolioName/portfolio-name";
 
 import "@testing-library/jest-dom";
 

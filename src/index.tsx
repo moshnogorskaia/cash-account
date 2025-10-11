@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ProductDetails from "./product-details/page";
+import ProductDetails from "./MainPage/page";
 import "./globals.css";
 
 const root = ReactDOM.createRoot(

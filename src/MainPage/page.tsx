@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { SecuritiesAccount } from "./securities-account";
-import { CashAccount } from "./cash-account";
-import { PortfolioName } from "./portfolio-name";
+import { SecuritiesAccount } from "../SecuritiesAccount/securities-account";
+import { CashAccount } from "../CashAccount/cash-account";
+import { PortfolioName } from "../PortfolioName/portfolio-name";
 
 const Header = styled.div`
   margin-top: calc(var(--spacing) * 5);
